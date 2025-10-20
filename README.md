@@ -45,7 +45,7 @@ El módulo `sistema_universitario::sistema_universitario` define una estructura 
 
 ---
 
-## 🚀 Publicar el paquete en Testnet para pruebas
+## 🚀 Publicar el paquete en Testnet
 
 1. Compila el módulo para asegurarte que no existan errores:
 ```
