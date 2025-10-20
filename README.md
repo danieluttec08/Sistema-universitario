@@ -62,7 +62,9 @@ Al finalizar, obtendrás un Package ID que identifica tu módulo en la blockchai
 📌 Guarda este ID, lo necesitarás para llamar a todas las funciones:
 
 ```
+Ejemplo: 
 Package ID: 0x1234567890abcdef1234567890abcdef12345678
+
 ```
 ---
 ## Uso del módulo: funciones principales
