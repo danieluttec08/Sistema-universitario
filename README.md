@@ -143,7 +143,7 @@ Parámetros:
 | `<ID_ESTUDIANTE>`         | ID único del estudiante (u16).  |
 | `<OBJECT_ID_UNIVERSIDAD>` | Object ID de la universidad.    |
 
-🧮 5. Asignar calificación
+## 🧮 5. Asignar calificación
 ```
 sui client call \
   --package <PACKAGE_ID> \
@@ -171,25 +171,27 @@ sui client objects
 
 Ver los datos de una universidad específica:
 ```
-sui client object <OBJECT_ID_UNIVERSIDAD>
+sui client object <OBJECT_ID_UNIVERSIDAD> 
 ```
+<OBJECT_ID_UNIVERSIDAD> 
+Ejemplo: 0x1234567890abcdef1234567890abcdef12345678
 ---
 
 ## Flujo completo de prueba
 
---Publicar el paquete y obtener Package ID.
+- Publicar el paquete y obtener Package ID.
 
---Crear universidad (guardar Object ID).
+- Crear universidad (guardar Object ID).
 
---Agregar carreras, profesores y estudiantes.
+- Agregar carreras, profesores y estudiantes.
 
---Asignar calificaciones.
+- Asignar calificaciones.
 
---Consultar datos y verificar resultados en la blockchain.
+- Consultar datos y verificar resultados en la blockchain.
 
 ---
 ## 🧾 Autor
 
-Daniel Galicia Fuentes
-Proyecto desarrollado en Move sobre la blockchain de Sui.
-💻 GitHub: https://github.com/danieluttec08
+**Daniel Galicia Fuentes**
+- Proyecto desarrollado en Move sobre la blockchain de Sui.
+- 💻 GitHub: https://github.com/danieluttec08
