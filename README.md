@@ -1,4 +1,4 @@
-![banner](./imagenes/banner.jpg)
+![banner](./imagenes/banner_daniel.jpg)
 # WayLearn Sui Bootcamp: Tutorial para despliegue en mainnet y creación de MVR
 
 Sui es una plataforma de blockchain y contratos inteligentes de capa 1 diseñada para que la propiedad de activos digitales sea rápida, privada, segura y accesible.
