@@ -25,8 +25,9 @@ El módulo `sistema_universitario::sistema_universitario` define una estructura 
 
 Ubicado en la raíz del proyecto, ejecuta:
 
+```
 sui client publish 
-
+```
 
 📋 Guarda el valor del Package ID que aparece en consola, por ejemplo:
 
