@@ -109,117 +109,87 @@ sui client call \
 
 
 ## 👩‍🏫 3. Registrar un profesor
+```
 sui client call \
-  --package 0x1234567890abcdef1234567890abcdef12345678 \
+  --package <PACKAGE_ID> \
   --module sistema_universitario \
   --function agregar_profesor \
-  --args "Dra. Ana Pérez" "Bases de Datos" 200 0xabc123... \
+  --args "<NOMBRE_PROFESOR>" "<MATERIA>" <ID_PROFESOR> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
+```
+Parámetros:
+| Parámetro                 | Descripción                     |
+| ------------------------- | ------------------------------- |
+| `<NOMBRE_PROFESOR>`       | Nombre completo del profesor.   |
+| `<MATERIA>`               | Materia que enseña el profesor. |
+| `<ID_PROFESOR>`           | ID único del profesor (u16).    |
+| `<OBJECT_ID_UNIVERSIDAD>` | Object ID de la universidad.    |
+
 
 ## 🎒 4. Registrar un estudiante
+```
 sui client call \
-  --package 0x1234567890abcdef1234567890abcdef12345678 \
+  --package <PACKAGE_ID> \
   --module sistema_universitario \
   --function agregar_estudiante \
-  --args "Juan López" 20 300 0xabc123... \ --agregar el package de 
+  --args "<NOMBRE_ESTUDIANTE>" <EDAD> <ID_ESTUDIANTE> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
+```
+Parámetros:
+| Parámetro                 | Descripción                     |
+| ------------------------- | ------------------------------- |
+| `<NOMBRE_ESTUDIANTE>`     | Nombre completo del estudiante. |
+| `<EDAD>`                  | Edad del estudiante (u8).       |
+| `<ID_ESTUDIANTE>`         | ID único del estudiante (u16).  |
+| `<OBJECT_ID_UNIVERSIDAD>` | Object ID de la universidad.    |
 
 🧮 5. Asignar calificación
+```
 sui client call \
-  --package 0x1234567890abcdef1234567890abcdef12345678 \
+  --package <PACKAGE_ID> \
   --module sistema_universitario \
   --function asignar_calificacion \
-  --args 101 300 95 0xabc123... \
+  --args <CODIGO_CARRERA> <ID_ESTUDIANTE> <CALIFICACION> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
+```
+Parámetros:
+| Parámetro                 | Descripción                  |
+| ------------------------- | ---------------------------- |
+| `<CODIGO_CARRERA>`        | Código de la carrera (u16)   |
+| `<ID_ESTUDIANTE>`         | ID del estudiante (u16)      |
+| `<CALIFICACION>`          | Nota del estudiante (0–100)  |
+| `<OBJECT_ID_UNIVERSIDAD>` | Object ID de la universidad. |
 
+---
 
-📌 Donde:
+## 6. Verificar objetos y estado
 
-101 = código de carrera
-
-300 = ID del estudiante
-
-95 = nota (0–100)
-
-0xabc123... = ID de la universidad
-
-🧾 6. Verificar objetos creados
-
-Ver todos los objetos de tu cuenta:
-
+Consulta todos los objetos de tu cuenta:
+```
 sui client objects
+```
 
+Ver los datos de una universidad específica:
+```
+sui client object <OBJECT_ID_UNIVERSIDAD>
+```
+---
 
-Ver los datos de una universidad:
+## Flujo completo de prueba
 
-sui client object 0xabc123...
+--Publicar el paquete y obtener Package ID.
 
-🧠 Estructuras principales
-Universidad
+--Crear universidad (guardar Object ID).
 
-nombre: String
+--Agregar carreras, profesores y estudiantes.
 
-carreras: VecMap<CodigoCarrera, Carrera>
+--Asignar calificaciones.
 
-profesores: VecMap<IDProfesor, Profesor>
+--Consultar datos y verificar resultados en la blockchain.
 
-estudiantes: VecMap<IDEstudiante, Estudiante>
-
-Carrera
-
-nombre: String
-
-duracion: u8
-
-calificaciones: VecMap<IDEstudiante, u8>
-
-Profesor
-
-nombre: String
-
-materia: String
-
-Estudiante
-
-nombre: String
-
-edad: u8
-
-📦 Estructura del proyecto
-sistema_universitario/
-│
-├── sources/
-│   └── sistema_universitario.move   # Código fuente del módulo
-│
-├── Move.toml                        # Configuración del paquete Move
-└── README.md                        # Documentación del proyecto
-
-🧪 Pruebas locales
-
-Antes de desplegar en testnet, puedes ejecutar pruebas locales:
-
-sui move build
-sui move test
-
-
-Si todo está correcto, podrás publicar el paquete sin errores.
-
-📜 Ejemplo de flujo completo
-
-Publica el paquete.
-
-Crea la universidad (guarda el objectId).
-
-Agrega carreras, profesores y estudiantes.
-
-Asigna calificaciones.
-
-Consulta los datos con sui client object.
-
-Este flujo simula el manejo completo de una universidad descentralizada en la blockchain de Sui.
-
-🧾 Autor
+---
+## 🧾 Autor
 
 Daniel Galicia Fuentes
-Proyecto desarrollado en Move sobre la Sui Testnet
-💻 GitHub: https://github.com/tu_usuario
+Proyecto desarrollado en Move sobre la blockchain de Sui.
+💻 GitHub: https://github.com/danieluttec08
