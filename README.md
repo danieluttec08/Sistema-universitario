@@ -1,15 +1,39 @@
 ![banner](./imagenes/Banner_daniel.png)
-# WayLearn Sui Bootcamp: Tutorial para despliegue en mainnet y creación de MVR
+# 🎓 Sistema Universitario en Sui Move
 
-Sui es una plataforma de blockchain y contratos inteligentes de capa 1 diseñada para que la propiedad de activos digitales sea rápida, privada, segura y accesible.
+Este proyecto implementa un **sistema de gestión universitaria descentralizado** sobre la blockchain de **Sui**, desarrollado completamente en **Move**.
 
-Move es un lenguaje de código abierto para escribir paquetes seguros para manipular objetos en blockchain. Permite bibliotecas, herramientas y comunidades de desarrolladores comunes en blockchains con modelos de datos y ejecución muy diferentes.
+Permite administrar universidades, carreras, profesores y estudiantes, así como registrar calificaciones, todo dentro del modelo de objetos seguro e inmutable de Sui.
 
-## Proyecto base
+---
 
-Puedes usar este repositorio como tu punto de despliegue de tu proyecto backend.
+## 🧩 Descripción del Proyecto
 
-### Abriendo con Codespaces
+El módulo `sistema_universitario::sistema_universitario` define una estructura de datos y funciones para manejar entidades académicas.
+
+### 📘 Funcionalidades principales:
+- Crear universidades.
+- Agregar carreras con su duración.
+- Registrar profesores y estudiantes.
+- Asignar calificaciones por estudiante y carrera.
+- Editar o eliminar carreras.
+- Eliminar una universidad completa.
+
+---
+
+## 🛠️ Requisitos previos
+
+Antes de comenzar, asegúrate de tener instalado y configurado el entorno de desarrollo de **Sui CLI**:
+
+```bash
+# Instalar Sui (si aún no lo tienes)
+curl -fsSL https://install.sui.io | sh
+
+# Verifica la instalación
+sui --version
+
+# Configurar entorno en testnet
+sui client switch --env testnet
 
 * Asegúrate de clonar este repositorio a tu cuenta usando el botón **`Fork`**.
     
