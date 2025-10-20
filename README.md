@@ -45,14 +45,14 @@ El módulo `sistema_universitario::sistema_universitario` define una estructura 
 
 ---
 
-## 🚀 Publicar el paquete en Testnet
+## 🚀 Publicar el paquete en Testnet para pruebas
 
 1. Compila el módulo para asegurarte que no existan errores:
 ```
 sui move build
 ```
 
-3. Ubicado en la raíz del proyecto, ejecuta:
+2. Ubicado en la raíz del proyecto, ejecuta:
 
 ```
 sui client publish 
@@ -170,7 +170,7 @@ sui client call \
 
 ---
 
-## 6. Verificar objetos y estado
+## ✔ 6. Verificar objetos y estado
 
 Consulta todos los objetos de tu cuenta:
 
@@ -188,7 +188,7 @@ sui client object <OBJECT_ID_UNIVERSIDAD>
 
 ---
 
-## 7. Flujo completo de prueba
+## 📊 7. Flujo completo de prueba
 
 - Publicar el paquete y obtener Package ID.
 
