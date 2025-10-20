@@ -71,6 +71,7 @@ Package ID: 0x1234567890abcdef1234567890abcdef12345678
 Cada comando incluye descripción de los parámetros principales y cuáles deberás cambiar según tu despliegue
 
 ## 🏛️ 1. Crear una universidad
+
 ```
 sui client call \
   --package <PACKAGE_ID> \
@@ -80,11 +81,10 @@ sui client call \
   --gas-budget 100000000
 
 ```
-Parámetros:
+**Parámetros:**
 
-Parámetro	Descripción
-<PACKAGE_ID>	ID del paquete publicado en Sui.
-<NOMBRE_UNIVERSIDAD>	Nombre de la universidad que quieres crear. Puede ser cualquier string.
+- <PACKAGE_ID>	ID del paquete publicado en Sui.
+- <NOMBRE_UNIVERSIDAD>	Nombre de la universidad que quieres crear. Puede ser cualquier string.
 
 Este comando devuelve un Object ID que representa la universidad creada.
 📌 Guarda este ID para usarlo en todas las demás funciones.
@@ -100,6 +100,8 @@ sui client call \
   --gas-budget 100000000
 
 ```
+**Parámetros:**
+
 | Parámetro                 | Descripción                                     |
 | ------------------------- | ----------------------------------------------- |
 | `<NOMBRE_CARRERA>`        | Nombre de la carrera (string).                  |
@@ -109,6 +111,7 @@ sui client call \
 
 
 ## 👩‍🏫 3. Registrar un profesor
+
 ```
 sui client call \
   --package <PACKAGE_ID> \
@@ -117,7 +120,8 @@ sui client call \
   --args "<NOMBRE_PROFESOR>" "<MATERIA>" <ID_PROFESOR> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
 ```
-Parámetros:
+**Parámetros:**
+
 | Parámetro                 | Descripción                     |
 | ------------------------- | ------------------------------- |
 | `<NOMBRE_PROFESOR>`       | Nombre completo del profesor.   |
@@ -127,6 +131,7 @@ Parámetros:
 
 
 ## 🎒 4. Registrar un estudiante
+
 ```
 sui client call \
   --package <PACKAGE_ID> \
@@ -135,7 +140,8 @@ sui client call \
   --args "<NOMBRE_ESTUDIANTE>" <EDAD> <ID_ESTUDIANTE> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
 ```
-Parámetros:
+**Parámetros:**
+
 | Parámetro                 | Descripción                     |
 | ------------------------- | ------------------------------- |
 | `<NOMBRE_ESTUDIANTE>`     | Nombre completo del estudiante. |
@@ -144,6 +150,7 @@ Parámetros:
 | `<OBJECT_ID_UNIVERSIDAD>` | Object ID de la universidad.    |
 
 ## 🧮 5. Asignar calificación
+
 ```
 sui client call \
   --package <PACKAGE_ID> \
@@ -152,7 +159,8 @@ sui client call \
   --args <CODIGO_CARRERA> <ID_ESTUDIANTE> <CALIFICACION> <OBJECT_ID_UNIVERSIDAD> \
   --gas-budget 100000000
 ```
-Parámetros:
+**Parámetros:**
+
 | Parámetro                 | Descripción                  |
 | ------------------------- | ---------------------------- |
 | `<CODIGO_CARRERA>`        | Código de la carrera (u16)   |
@@ -165,19 +173,22 @@ Parámetros:
 ## 6. Verificar objetos y estado
 
 Consulta todos los objetos de tu cuenta:
+
 ```
 sui client objects
 ```
 
 Ver los datos de una universidad específica:
+
 ```
 sui client object <OBJECT_ID_UNIVERSIDAD> 
 ```
-<OBJECT_ID_UNIVERSIDAD> 
-Ejemplo: 0x1234567890abcdef1234567890abcdef12345678
+- <OBJECT_ID_UNIVERSIDAD> 
+- Ejemplo: 0x1234567890abcdef1234567890abcdef12345678
+
 ---
 
-## Flujo completo de prueba
+## 7. Flujo completo de prueba
 
 - Publicar el paquete y obtener Package ID.
 
@@ -190,6 +201,7 @@ Ejemplo: 0x1234567890abcdef1234567890abcdef12345678
 - Consultar datos y verificar resultados en la blockchain.
 
 ---
+
 ## 🧾 Autor
 
 **Daniel Galicia Fuentes**
